@@ -498,20 +498,39 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 3 / 4;
   border-radius: var(--radius-xl);
   background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  border: 2px solid transparent;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 40px rgba(79, 70, 229, 0.35), 0 0 80px rgba(6, 182, 212, 0.2), 0 0 120px rgba(139, 92, 246, 0.1);
 }
 
 .about-image-card::before {
   content: '';
   position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4), var(--accent-1));
+  z-index: -1;
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.about-image-card::after {
+  content: '';
+  position: absolute;
   inset: 0;
-  background: var(--gradient-main);
-  opacity: 0.08;
+  border-radius: var(--radius-xl);
+  background: var(--bg-primary);
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .about-image {
