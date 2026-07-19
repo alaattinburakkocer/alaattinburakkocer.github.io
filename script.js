@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Typing Animation ---------- */
   const typedTextEl = document.getElementById('typed-text');
   const titles = [
-    'Electronics & Communication Engineering Student',
-    'AI / ML Enthusiast',
-    'IT Business Development',
+    'Electronics & Communication Engineering Graduate',
+    'AI / ML & Privacy-Preserving AI Researcher',
+    'Data Science & Deep Learning Enthusiast',
   ];
   let titleIndex = 0;
   let charIndex = 0;
